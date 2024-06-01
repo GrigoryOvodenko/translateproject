@@ -1,0 +1,21 @@
+<html>
+<title>#{name2}</title>
+if flag=='error'
+    <script>alert('Этот email уже используется!')</script>
+<div style='margin:auto;width:50%;'>
+<div style='float:left;padding: 14px 16px;border: 1px solid #ccc;background-color: #f1f1f1;'>
+<a href='http://localhost:3000/login'>Логин</a>
+</div>
+<div style='float:left;padding: 14px 16px;border: 1px solid #ccc;background-color: #f1f1f1;'>Регистрация</div>
+</div><br/><br/><br/><br/><br/><br/>
+<div id ='main_block' style='margin:auto;width:50%;'>
+<form action='/registration' method='post'  id='formreg'>
+<div style='float:left;width:100px;'><div style='height:50px;'>
+<label>Email:</label></div><div style='height:50px;'>
+<label>Пароль:</label></div></div><div style='float:left;width:50px;'>
+<div style='height:50px;'><input type='text' name='email'  placeholder='Введите email' required/></div>
+<div style='height:50px;'><input type='text' name='pwd'  placeholder='Введите пароль' required/></div>
+<div><input type='submit' value='Отправить'></div></div>
+</form></div>
+
+</html>

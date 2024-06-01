@@ -1,0 +1,76 @@
+
+        
+
+        
+head
+    title График с помощью Chart.js
+    script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+
+body
+   
+    - var userid = userid;
+    - var tokenVar = tokenVar;
+  
+
+    
+    
+
+    div(id='header' style='height:auto;')
+        div(style='background:#213646;height: 25%;')
+            div(id='logo' style='float:left;width:30%;color:white')
+                img(src='#' alt='Логотип')
+            div(id='formstats' style='float:left;width:30%;')
+                div
+                        form(method='post'  id='myform' action='/reports/statsuser/?tokenVar='+tokenVar+'&userid='+userid )
+                            label(style='color:white') Выберите Отчет:  
+                            select(form='myform' id='typereportid' name='typereport')
+                                    option(value='Отчет по языкам') Отчет по языкам
+                            <br/>
+                            <br/>
+                            input(type='submit' value='Получить отчет')
+            div(style='float:right;width:5%;margin-top:20px')
+                                              
+                form(action='/logout' method='post')
+                    input(type='submit' value='Выход')
+                                   
+         
+
+    <canvas id ="myChart"></canvas>
+    
+    script.
+
+  
+ 
+       
+        const ctx = document.getElementById('myChart').getContext('2d');
+        if ('#{namereport}' =='Отчет по языкам' ){
+        const myChart = new Chart(ctx, { type: 'line', data: { labels:['Англиийский','Иврит','Немецкий'],datasets: [{label: '#{namereport}',data:[#{data}], backgroundColor: 'rgba(255, 99, 132, 0.2)',     borderColor: 'rgba(255, 99, 132, 1)',   borderWidth: 1, },], },      });
+
+
+
+
+
+
+
+        }
+      
+
+
+
+     
+         
+          
+            
+              
+              
+             
+         
+           
+           
+     
+       
+
+
+
+

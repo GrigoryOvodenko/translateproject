@@ -1,0 +1,51 @@
+<body><div id='header' style='height:auto;'><div style='background:#213646;height: 25%;'>
+<div id='logo' style='float:left;width:30%;color:white'><img src='#' alt='Логотип'></div>
+<div id='formsearch' style='float:left;width:30%;'>
+<form action='/search/?tokenVar=#{tokenVar}&userid=#{userid}' method='post'  id='myform' >
+<label style='color:white'>Выберите язык:  </label>
+<select form='myform' id='langs' name='mylang'>
+<option value='Английский'>Английский</option><option value='Иврит'>Иврит</option>
+<option value='Немецкий'>Немецкий</option></select><br/><br/>
+<input type='text' placeholder='Введите слово' name='word' required/> <input type='submit' value='Поиск'/>
+</form>
+</div>
+<div style='float:right;width:5%;margin-top:20px'>
+
+<form action='/logout' method='post' >
+
+<input type='submit' value='Выход'>
+</form>
+</div>
+</div>
+<div id='contentblock' style='height:400px;margin-top:10px'><div id='navpanel' style='height:100px;margin: auto;width:50%'><nav>
+<a style='font-size:18px;' href='http://localhost:3000/main?tokenVar=#{tokenVar}&userid=#{userid}'>Главная</a>
+<a style='font-size:18px;margin-left:40px;' href='http://localhost:3000/questions?tokenVar=#{tokenVar}&userid=#{userid}'>Обратная связь</a>
+<a style='font-size:18px;margin-left:40px;' href='http://localhost:3000/reports/statsuser?tokenVar=#{tokenVar}&userid=#{userid}'>Статистика</a>
+
+</nav></div><div id='basecontent' >
+
+
+<div id='previouslywords_ten' style='float:left;width:15%;'>
+<p style='text-align:center;font-weight:bold'>История</p>
+<ul>
+each val in resultsLOG
+    <li>#{val.Name+" - "}#{val.Lang}</li>
+    
+</ul>
+</div>
+<div id ='main_block' style='float:left;margin-left:100px;'>
+   
+
+
+
+if !centerresult.length
+ <h2>Наш словарь - ващ помощник в изучении языков</h2>
+ <h3>Наши услуги:</h3><ul><li>Англо-русский словарь</li><br/><li>Иврит-русский словарь</li><br/><li>Немецко-русский словарь</li></ul> 
+else
+    <h2>#{centerresult[0]}  -  #{centerresult[1]}</h2>
+</div>
+
+
+ </div> </div> </div>  
+
+

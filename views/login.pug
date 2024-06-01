@@ -1,0 +1,16 @@
+if flag =='true'
+    <script>alert("Спасибо за обращение мы с вами свяжемся!")</script>
+<div style='margin:auto;width:50%;'>
+<div style='float:left;padding: 14px 16px;border: 1px solid #ccc;background-color: #f1f1f1;'>Логин</div>
+<div style='float:left;padding: 14px 16px;border: 1px solid #ccc;background-color: #f1f1f1;'>
+<a href='http://localhost:3000/registration'>Регистрация</a></div></div><br/><br/><br/><br/><br/><br/>
+<div id ='main_block' style='clear:both;margin:auto;width:50%;'>
+<form action='/login' method='post'  id='formreg'><div style='float:left;width:100px;'>
+<div style='height:50px;'><label>Email:</label></div><div style='height:50px;'><label>Пароль:</label>
+</div></div><div style='float:left;width:100px;'><div style='height:50px;'>
+<input type='text' name='email'  placeholder='Введите email' value='#{email}' required/>
+</div><div style='height:50px;'>
+<input type='text' name='pwd'  placeholder='Введите пароль' required/></div>
+<div><input type='submit' value='Отправить'></div><div style='float:left;height:100px;margin-top:10px;'>
+
+<a href='http://localhost:3000/retrieve'>Восстановить</a></div></div></form></div>

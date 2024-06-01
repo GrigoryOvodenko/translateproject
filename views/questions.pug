@@ -1,0 +1,28 @@
+
+if flag =='false'
+    <script>alert("Ошибка в форме обращения!")</script>
+<body>
+<div id='questionform' style='margin:auto;width:50%;'>
+<form method='post' action='/questions/?tokenVar=#{tokenVar}&userid=#{userid}'>
+<div id='questions' style='float:left;'>
+<label style='float:left;'>Обращение:</label>  
+<input  type='text' placeholder='Введите Обращение'  style='float:left;margin-left:10px;' name='fieldtext' required>
+</div>
+<div id='submitblock' style='float:left;clear:both;'>
+<div style='margin-top:30px;margin-left:30px'>
+<input  type='submit' value='Отправить'>
+</div>
+</div>
+</form>
+<div id ='logout' >
+<form action='/logout' method='post' >
+
+<input type='submit' value='Выход' style='margin-left:10px;'>
+</form>
+
+</div>
+
+
+
+
+</body>
